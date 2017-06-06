@@ -255,6 +255,29 @@ Anchura de un elemento _ej: 320px_
         width: 320px !important;
     }
 
+## Estructura del contenido
+
+A continuación se presenta una estructura básica para comenzar a desarrollar un email desde cero.
+
+    <body style="margin:0; padding:0;" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+    
+        <!--[if gte mso 15]>
+            <style type="text/css" media="all">
+                tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
+            </style>
+        <![endif]-->
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" bcolor="#fff">
+            <tr>
+                <td align="center" valign="top">
+                    <!-- Empieza el Contenido -->
+                        
+                    <!-- Final de Contenido-->
+                </td>
+            </tr>
+        </table>
+
+    </body>
 
 
 
