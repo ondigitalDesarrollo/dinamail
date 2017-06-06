@@ -281,4 +281,23 @@ A continuación se presenta una estructura básica para comenzar a desarrollar u
     </body>
 
 
+## Imágenes de Fondo y VML para Outlook 
+
+Para poder usar imágenes en el background se usa un condicional para que el motor de Outlook después de la versión 2009 pueda renderizarlo, se usa `gte` para decir que es después de esa versión y el `9` para inlcluir la versión.
+
+Linea Condicional para Outlook +9
+     
+     <!--[if gte mso 9]>
+        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px; height:332px;">
+        <v:fill type="tile" src="img/sydney.jpg" color="#000" />
+        <v:textbox inset="0,0,0,0">
+    <![endif]-->
+
+            <!--[if gte mso 9]>
+         </v:textbox>
+     </v:rect>
+     <![endif]-->
+
+
+
 
