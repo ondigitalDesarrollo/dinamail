@@ -260,7 +260,8 @@ Anchura de un elemento _ej: 320px_
 A continuación se presenta una estructura básica para comenzar a desarrollar un email desde cero.
 
     <body style="margin:0; padding:0;" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
-    
+
+        <!-- Línea Condicional para Outlook que previene el aumento de los spacers -->
         <!--[if gte mso 15]>
             <style type="text/css" media="all">
                 tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
