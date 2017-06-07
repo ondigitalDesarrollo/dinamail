@@ -22,7 +22,7 @@ Para estar al tanto de las estadísticas de los provedores de internet visitar e
 
 Para estructurar rápidamente tablas se recomienda usar el plugin de  [emmet](https://emmet.io/) e instalarlo en tu editor de código favorito.
 
-###Ejemplos:
+### Ejemplos:
 
 Crear una tabla con una columna y tres filas    
     <!-- table>tr(td*3) -->
@@ -318,6 +318,34 @@ Ejemplo:
             </td>
         </tr>
     </table>
+
+## Organizar el CSS para EMAIL
+
+En email los archivos no se usan archivos externos, los estilos se usan en línea y se intenta comprimir el archivo para que cargue más rápido
+
+Ejemplo
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"  bgcolor="#cccccc">
+        <tr>
+            <td align="center" valign="top" align="center">
+                <!-- Empieza el Contenido -->
+                    <table width="600" bgcolor="000000" align="center" class="bgGray">
+                        <tr>
+                            <td align="center" height="300">
+                                <span class="fontRed" style="font-family: arial; font-size: 20px; color: #ffffff;">
+                                  Este es mi Título  
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                <!-- Final de Contenido-->
+            </td>
+        </tr>
+
+
+
+
+
 
 
 
