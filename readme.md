@@ -1,6 +1,6 @@
-# Documentación Para Crear Emails Dinámicos
+# Documentación Para Crear Emails Dinámicos.
 
-## Historia del Correo Electrónico
+## Historia del Correo Electrónico.
 
 El desarrollo de emails no ha cambiado en los últimos 25 años, su estructura esta compuesta de html y CSS inline.
 
@@ -18,7 +18,7 @@ Los emails no trabajan como una página web y visceversa, el auge de los disposi
 
 Para estar al tanto de las estadísticas de los provedores de internet visitar el siguiente [enlace](https://emailclientmarketshare.com/) 
 
-## Entornos de Trabajo 
+## Entornos de Trabajo. 
 
 Para estructurar rápidamente tablas se recomienda usar el plugin de  [emmet](https://emmet.io/) e instalarlo en tu editor de código favorito.
 
@@ -58,7 +58,7 @@ Crear una tabla con tres columnas y tres filas
         </tr>
     </table>
 
-## Bases de Desarrollo Para Email
+## Bases de Desarrollo Para Email.
 
 Conceptos básicos para desarrollar emails:
 
@@ -113,22 +113,22 @@ A continuación una lista de los elementos más usados para el desarrollo de ema
 
 Existen algunas propiedades y hacks para que nuestros emails se adapten bien a casi todos los dispositivos y clientes de correo electrónico, a continuación una lista de hacks que nos sirven para realizar emails responsive.
 
-### DOCTYPE
+### DOCTYPE.
 
 Se recomienda el siguiente doctype porque hay algunos clientes de correo que necesitan de esta propiedad para poder mostrar el email.
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html xmlns="http://www.w3.org/1999/xhtml">
 
-### Metatag Viewport
+### Metatag Viewport.
 Meta etiqueta para que el browser interprete el tamaño del dispositivo y permita el uso de mediaqueries.
 
     <!-- view port meta tag -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-### Hacks CSS head
+### Hacks CSS head.
 
-##### Evitar que iPhone nos agrande las fuentes
+##### Evitar que iPhone nos agrande las fuentes.
 
     * {
         -webkit-text-size-adjust: none;
@@ -136,7 +136,7 @@ Meta etiqueta para que el browser interprete el tamaño del dispositivo y permit
         max-height: 1000000px;
     }
 
-##### Quitar el padding del Cliente Outlook para PC (2013) en los elementos `<a></a>` 
+##### Quitar el padding del Cliente Outlook para PC (2013) en los elementos `<a></a>`.
 
     #outlook a {
         padding: 0;
@@ -160,7 +160,7 @@ Meta etiqueta para que el browser interprete el tamaño del dispositivo y permit
         text-decoration: none !important;
     }   
 
-##### Media Queries
+##### Media Queries.
 
 En el caso de las media queries se intenta cubrir la gran cantidad de dispositivos de acuerdo a los Clientes de Email en que se valla a usar el correo, en este caso se usa un breakpoint de **600px** para abaracar gran cantidad de dispositvos, esta medida _puede variar_  e incluso se pueden insertar más breakpoints dependiendo los resultados que querramos obtener, según los testeos que se realicen.
 
@@ -169,7 +169,7 @@ En el caso de las media queries se intenta cubrir la gran cantidad de dispositiv
         <!-- Styles Here -->
     }
 
-##### Otros Estilos
+##### Otros Estilos.
 
 Los estilos vistos hasta ahora son de gran ayuda a la hora de maquetar emails responsive, a parte de estos puedes ver en la siguiente lista algunas clases que nos son de gran ayuda como tamaños en la tipografía, poner en bloque un elemento, esconder elementos en desktop y mostrar en movile, entre otros.
 
@@ -215,7 +215,7 @@ Mover un elemento hacia arriba
         display: table-header-group !important;
     }
 
-###### Estilos para tipografía
+###### Estilos para tipografía.
 
 Alinear a la derecha
 
@@ -241,7 +241,7 @@ Dar un tamaño de fuente _ej: 27px_
         font-weight: normal !important;
         line-height: 27px !important;
     }
-###### Anchos y Altos de un elemento
+###### Anchos y Altos de un elemento.
 
 Altura de un elemento _ej: 10px_
 
@@ -255,7 +255,7 @@ Anchura de un elemento _ej: 320px_
         width: 320px !important;
     }
 
-## Estructura del contenido
+## Estructura del contenido.
 
 A continuación se presenta una estructura básica para comenzar a desarrollar un email desde cero.
 
@@ -281,7 +281,7 @@ A continuación se presenta una estructura básica para comenzar a desarrollar u
     </body>
 
 
-## Imágenes de Fondo y VML para Outlook 
+## Imágenes de Fondo y VML para Outlook.
 
 Para poder usar imágenes en el background se usa un condicional para que el motor de Outlook después de la versión 2009 pueda renderizarlo, se usa `gte` para decir que es después de esa versión y el `9` para inlcluir la versión.
 
@@ -299,7 +299,7 @@ Linea Condicional para Outlook +9
      <![endif]-->
 
 
-## Imágenes de alta resolución 
+## Imágenes de alta resolución.
 
 Diseñar la imagen de un porcentaje en pixeles mayor a como va ir en el `HTML`  con un ajuste de propiedades que hacen que la imagen sea más pequeña.
 
@@ -319,11 +319,108 @@ Ejemplo:
         </tr>
     </table>
 
-## Organizar el CSS para EMAIL
+## Organizar el CSS para EMAIL.
 
-En email los archivos no se usan archivos externos, los estilos se usan en línea y se intenta comprimir el archivo para que cargue más rápido
+En email los archivos no se usan archivos externos, los estilos se usan en línea y se intenta comprimir el archivo para que cargue más rápido.
+
+Para evitar que los clientes de correo nos anulen las clases se usa `!important` en la propiedad de la clase para que pueda servir y visualizarse correctamente, con esto evitamos que nuestro email se estropee.
 
 Ejemplo
+
+    <!-- Clases CSS después del HEAD para la construcción del email -->
+    <style type="text/css">
+        /* hacks */
+        * {
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            max-height: 1000000px;
+        }
+        table {
+            border-collapse: collapse !important;
+        }
+        #outlook a {
+            padding: 0;
+        }
+        .ReadMsgBody {
+            width: 100%;
+        }
+        .ExternalClass {
+            width: 100%;
+        }
+        .ExternalClass * {
+            line-height: 100%;
+        }
+        .ios_geo a {
+            color: #1c1c1c !important;
+            text-decoration: none !important;
+        }
+
+        .headline{
+            font-family: serif;
+            color: #1c1c1c;
+            font-size: 30px;
+        }
+        /* responsive styles */
+        @media only screen and (max-width: 600px) {
+            /* global styles */
+            .hide {
+                display: none !important;
+                display: none;
+            }
+            .blockwrap {
+                display: block !important;
+            }
+            .showme {
+                display: block !important;
+                width: auto !important;
+                overflow: visible !important;
+                float: none !important;
+                max-height: inherit !important;
+                max-width: inherit !important;
+                line-height: auto !important;
+                margin-top: 0px !important;
+                visibility: inherit !important;
+            }
+            *[class].movedown {
+                display: table-footer-group !important;
+            }
+            *[class].moveup {
+                display: table-header-group !important;
+            }
+            /* font styles */
+            *[class].textright {
+                text-align: right !important;
+            }
+            *[class].textleft {
+                text-align: left !important;
+            }
+            *[class].textcenter {
+                text-align: center !important;
+            }
+            *[class].font27 {
+                font-size: 27px !important;
+                font-weight: normal !important;
+                line-height: 27px !important;
+            }
+            /* Color Fuente */
+            *[class].fontRed{color: #ff0000 !important;}
+
+            /* width and heights */
+            *[class].h10 {
+                height: 10px !important;
+            }
+            *[class].w320 {
+                width: 320px !important;
+            }
+
+             /* Colores de Fondo */
+            *[class].bgGray{ background-color: #c1c1c1 !important}
+        }
+
+    </style>
+
+
+    <!-- Estructura del Email  -->
 
     <table width="100%" border="0" cellspacing="0" cellpadding="0"  bgcolor="#cccccc">
         <tr>
@@ -341,6 +438,83 @@ Ejemplo
                 <!-- Final de Contenido-->
             </td>
         </tr>
+
+# Técnicas de Maquetación y Diseño para Emails.
+
+Para cambiar elementos relacionados al diseño, tamaños o estructura hay que tener en cuenta el dispositivo en que se visualiza el email, en un elemento en móvil se vería vertical y en escritorio los elementos se verían horizontales.
+
+## Técnica de Stacking
+
+Es la posición de elementos en forma vertical. Es una técnica para un “apilamiento de enfoque” y también afecta el orden. 
+
+Ejemplo:
+
+Hay dos tablas, como contenedores, a ambas se aplica la clase “blockwrap”. Si se desea cambiar el orden, hay una clase declarada en Styles: “movedown” y “moveup” respectivamente. Esas clases deben incluirse en “inline style” junto a “blockwrap”. El resultado sería el cambio de la posición, es decir, el “Module right” aparecerá sobre el “Module left”.
+
+Estilos CSS:
+
+    /* Clases CSS usadas para la técnica de stacking */
+
+    /* Mover Elementos arriba o abajo */
+    *[class].movedown {
+        display: table-footer-group !important;
+    }
+    *[class].moveup {
+        display: table-header-group !important;
+    }
+
+    /* Poner los elementos en bloque  */
+    .blockwrap {
+        display: block !important;
+    }
+
+    /* Tamaños de acuerdo a la resolución */
+    *[class].w320 {
+        width: 320px !important;
+    }
+
+
+
+Código HTML:
+
+    <!--Comienzo Contenido-->
+    <table width="600" align="center" bgcolor="#cccccc" class="w320">
+        <tr>
+            <td width="300" align="center" class="w320 blockWrap moveDown">
+                
+                <table>
+                    <tr>
+                        <td>
+                            <span style="font-family:arial;color:#ff0000;font-size:20px;">
+                                Module Left
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+            <td width="300px" align="center" class="w320 blockWrap moveUp">
+
+                <table>
+                    <tr>
+                        <td>
+                            <span style="font-family:arial;color:#ff0000;font-size:20px;">
+                                Module Right
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+     <!--Final Contenido-->
+
+La técnica de Stacking proporcionan mayor libertad y control en el diseño.
+
+
+
+
 
 
 
