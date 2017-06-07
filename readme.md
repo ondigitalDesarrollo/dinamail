@@ -518,6 +518,93 @@ Los spacers son imágenes de **_1px x 1px_** para controlar el espacio en los em
 
 La técnica consiste en colocar un elemento _.gif_ en los lugares en que necesitemos un espacio, margen, padding, etc. Para ello se inserta dentro de una etiqueta **img** así: `<img src="img/spacer.gif" width="10" class="w50 h50">`
 
+# Buenas Prácticas para Tener en Cuenta.
+
+Estas son unas recomendaciones más útiles para mitigar los problemas más comunes en el desarrollo de HTML para emails.
+
+## Imágenes.
+
+Es importante entender que la propiedad de CSS “display:block” puede ayudarnos a evitar problema de espacios no necesarios en **Outlook**.
+
+Esta propiedad puede ser usada a gusto, pero es mejor siempre incluirla. Lo mismos aplica para la propiedad `“border=”0”`.
+
+Ejemplo:
+
+    <img src="img/beach.png" width="600" height="280" style=”display:block” border=”0”>
+
+## Tablas.
+
+Tablas son la unidad básica de construcción de nuestros emails. Debemos incluir estas propiedades para asegurarnos que van a ser interpretadas en su forma mas pura. También es mejor siempre declarar un valor para **“aling”** y **“valign”**.
+
+Ejemplo: 
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+             <td align="center" valign="top"> </td>
+        </tr>
+    </table>
+
+
+## El <BODY> tag.
+
+Para evitar que los servicios de email de web añadan estilos innecesarios a nuestro documento, debemos declarar estas propiedades en el `<body>`.
+
+## Colores de texto y de fondo.
+
+Siempre usa los 6 dígitos cuando necesites declarar un color en el CSS en línea y solo en formato hexadecimal.
+
+Ejemplo:
+
+    <td style=”color:#000000 font-size: 14px, background-color:#ffffff”>texto va aquí</td>
+
+## Texto y Fuentes.
+
+Para declarar nuestras fuentes, es mejor siempre incluir todos los aspectos de tu fuente como propiedades CSS en línea. Nunca uses el elemento `<font>` o el elemento `<p>`.Estas declaraciones deben ir en el elemento inmediato del texto
+
+Ejemplo:
+
+    <td style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; line-height:22px; color:#FFFFFF;">text va aqui</td>
+
+## Links.
+
+Los programas de email tienden a resaltar links en el texto. Para prevenir eso, siempre debemos declarar en el estilo en línea, el color y el tipo de decoración de texto que necesitamos.
+
+Ejemplo:
+
+    <a href=”” style="text-decoration:none; color:#ffffff; text-decoration:underline”>link va aqui</a> 
+
+## Mobile Links.
+
+En dispositivos mobiles, texto que parezca una dirección, un teléfono o una fecha, va a ser resaltado como un link automáticamente. La solución es una mezcla de CSS y de HTML.
+
+Ejemplo:
+
+    <td style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; line-height:22px; color:#FFFFFF;">
+        Estaremos en diciembre 28, 2016.
+    </td>
+
+Solución:
+
+    <style>
+        .ios_text a { color:#000000 !important; text-decoration:none !important; }
+    </style>
+
+    <td style="font-family:Arial, Helvetica, sans-serif; font-size: 17px; line-height:22px; color:#000000;">
+        Estaremos en <span class=”ios_fecha”>diciembre 28, 2016.</span>
+    </td>
+
+## Espacios entre Tablas.
+
+Es recomendable usar una tabla con una imagen transparente (spacers) para tener más control de los espacios entre tablas.
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td align="center" valign="top">
+            <img src="img/spacer.gif" width="50" class="w10">
+        </td>
+    </tr>
+    </table>
+
 
 
 
