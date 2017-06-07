@@ -493,7 +493,7 @@ Código HTML:
                 </table>
 
             </td>
-            <td width="300px" align="center" class="w320 blockWrap moveUp">
+            <td width="300" align="center" class="w320 blockWrap moveUp">
 
                 <table>
                     <tr>
@@ -511,6 +511,14 @@ Código HTML:
      <!--Final Contenido-->
 
 La técnica de Stacking proporcionan mayor libertad y control en el diseño.
+
+## Técnica de Spacers
+
+Los spacers son imágenes de **_1px x 1px_** para controlar el espacio en los emails, consiste en colocar este tipo de imágenes para conservar la maquetación debido a que algunos motores son demasiado antiguos y el mail se pueda ver cortado.
+
+La técnica consiste en colocar un elemento _.gif_ en los lugares en que necesitemos un espacio, margen, padding, etc. Para ello se inserta dentro de una etiqueta **img** así: `<img src="img/spacer.gif" width="10" class="w50 h50">`
+
+
 
 
 
