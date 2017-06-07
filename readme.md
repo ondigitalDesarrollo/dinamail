@@ -299,5 +299,26 @@ Linea Condicional para Outlook +9
      <![endif]-->
 
 
+## Imágenes de alta resolución 
+
+Diseñar la imagen de un porcentaje en pixeles mayor a como va ir en el `HTML`  con un ajuste de propiedades que hacen que la imagen sea más pequeña.
+
+Ejemplo:
+
+     <table width="100%" border="0" cellspacing="0" cellpadding="0" bcolor="#fff">
+        <tr>
+            <td align="center" valign="top">
+                <!-- Empieza el Contenido -->
+                    <table width="600">
+                        <tr>
+                            <td><img src="img/beach.png" alt="Beach" width="600" height="280"></td>
+                        </tr>
+                    </table>
+                <!-- Final de Contenido-->
+            </td>
+        </tr>
+    </table>
+
+
 
 
