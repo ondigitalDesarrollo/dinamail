@@ -90,14 +90,27 @@
             *[class].w320 {
                 width: 320px !important;
             }
-            *[class].w380 {
-                width: 380px !important;
-            }
             *[class].w360 {
                 width: 360px !important;
             }
+            *[class].w350 {
+                width: 350px !important;
+            }
+            *[class].w380 {
+                width: 380px !important;
+            }
+            
 
             /* Colors */
+
+            /* Espacios */
+            *[class].mBtm20{
+                margin-bottom: 20px !important;
+            }
+            *[class].mTop20{
+                margin-top: 20px !important;
+            }
+
         }
     </style>
 </head>
@@ -128,7 +141,7 @@
                             <!--Header-->
                             <table width="640" class="w380" align="center" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td width="223" class="w380">
+                                    <td width="223" class="w380 textCenter">
                                         <img src="img/PROJEKTO-welcome-DESK_31.png" width="223" alt="Logotipo Projecto">
                                     </td>
                                     <td width="416" align="right" class="hide">
@@ -141,82 +154,124 @@
                             <!--Spacer-->
                             <table border="0" cellspacing="0" cellpadding="0">
                                 <tr>
-                                    <td><img src="img/spacer.gif" alt="" height="20"></td>
+                                    <td><img src="img/spacer.gif" alt="" height="5"></td>
                                 </tr>
                             </table>
 
-                            <!--Wrapper-->
-                            <!--Top Border-->
-                            <table width="640" class="w380" border="0" cellspacing="0" cellpadding="0" cellmargin="0">
+                            <!-- Wrapper -->
+
+                            <!-- borde de arriba -->
+                            <table width="640" border="0" cellpadding="0" cellspacing="0" class="w380" cellmargin="0">
                                 <tr>
-                                    <td width="10"><img src="img/PROJEKTO-welcome-DESK_12.png" alt=""></td>
-                                    <td width="620" bgcolor="#ffffff"></td>
-                                    <td width="10"><img src="img/PROJEKTO-welcome-DESK_14.png" alt=""></td>
+                                    <td width="10"><img src="img/PROJEKTO-welcome-DESK_12.png" style="display:block"></td>
+                                    <td width="620" bgcolor="#ffffff" class="w360"></td>
+                                    <td width="10"><img src="img/PROJEKTO-welcome-DESK_14.png" style="display:block"></td>
                                 </tr>
                             </table>
 
-
-                            <table width="640" class="w380" border="0" cellspacing="0" cellpadding="0" cellmargin="0" bgcolor="#ffffff">
+                            <!-- header -->
+                            <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="w380" cellmargin="0">
                                 <tr>
-                                    <td width="15"><img src="img/spacer.gif" alt="" width="15"></td>
-                                    <td bgcolor="#ffffff">
+                                    <td width="15" class="hide"><img src="img/spacer.gif" width="15"></td>
+                                    <td class="w380 blockWrap textCenter moveDown">
 
-                                        <table width="610" class="w360">
+                                        <table width="405" border="0" cellpadding="0" cellspacing="0" class="w380 mBtm20">
                                             <tr>
-                                                <td style="font-family: arial;font-size:12px;color: #0d133d;">
-                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/> Aenean
-                                                    venenatis sollicitudin leo, sed pretium leo 
-                                                </td>
-                                                <td>
-
-                                                    <!--CTA green-->
-                                                     <table width="200"  cellmargin="0" cellspacing="0" cellpadding="0"  class="w380">
-                                                        <tr>
-                                                            <td width="10"><img width="10" src="img/PROJEKTO-cta-green-top-left.png" alt=""></td>
-                                                            <td width="180" bgcolor="#91c338"></td>
-                                                            <td width="10"><img width="10" src="img/PROJEKTO-cta-green-top-right.png" alt=""></td>
-                                                        </tr>
-                                                    </table>
-                                                    <table width="200" bgcolor="#91c338" cellmargin="0" cellspacing="0" cellpadding="0" width="200">
-                                                        <tr>
-                                                            <td>
-                                                                <td bcolor="#ffffff" width="10"></td>
-                                                                <td bcolor="#ffffff">
-                                                                    <span style="font-family:arial;text-transform:uppercase;color:#ffffff;font-size:13px;">empieza un proyecto</span>
-                                                                    <img src="img/cta-arrow.png" style="display:inline;" alt="">
-                                                                </td>
-                                                                <td bcolor="#ffffff" width="10"></td>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <table width="200"  cellmargin="0" cellspacing="0" cellpadding="0"  class="w380">
-                                                        <tr>
-                                                            <td width="10"><img width="10" src="img/PROJEKTO-cta-green-bt-left.png" alt=""></td>
-                                                            <td width="180" bgcolor="#91c338"></td>
-                                                            <td width="10"><img width="10" src="img/PROJEKTO-cta-green-bt-right.png" alt=""></td>
-                                                        </tr>
-                                                    </table>
-                                                    <!--/CTA  green-->
-
-
+                                                <td width="405" style="font-family: arial; font-size:12px; color:#0d133d; line-height:18px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> Aenean venenatis
+                                                    <span style="color:#91c338;">sollicitudin</span> leo, sed pretium leo
                                                 </td>
                                             </tr>
                                         </table>
 
+
                                     </td>
-                                    <td width="15"><img src="img/spacer.gif" alt="" width="15"></td>
+                                    <td width="200" class="w380 blockWrap textCenter moveUp">
+
+                                        <!-- Top Green Button-->
+                                        <table border="0" align="center" cellpadding="0" cellspacing="0" class="mBtm20 mTop20" cellmargin="0">
+                                            <tr>
+                                                <td>
+
+                                                    <table width="200" border="0" cellpadding="0" cellspacing="0" cellmargin="0">
+                                                        <tr>
+                                                            <td width="10"><img src="img/PROJEKTO-cta-green-top-left.png" width="10"
+                                                                    style="display:block"></td>
+                                                            <td width="180" bgcolor="#91c338" class="w360"></td>
+                                                            <td width="10"><img src="img/PROJEKTO-cta-green-top-right.png" width="10"
+                                                                    style="display:block"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table width="200" border="0" cellpadding="0" cellspacing="0" cellmargin="0">
+                                                        <tr>
+                                                            <td bgcolor="#91c338" width="10"></td>
+                                                            <td bgcolor="#91c338">
+                                                                <a href="http://google.com" style="color:#ffffff; text-decoration:none;"><span style="font-family:arial; font-size:14px; text-transform:uppercase; color:#ffffff;">empieza un projecto&nbsp;</span><img src="img/cta-arrow.png" border="0" style="display:inline;"></a>
+                                                            </td>
+                                                            <td bgcolor="#91c338" width="10"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <table width="200" border="0" cellpadding="0" cellspacing="0" cellmargin="0">
+                                                        <tr>
+                                                            <td width="10"><img src="img/PROJEKTO-cta-green-bt-left.png" width="10" style="display:block"></td>
+                                                            <td width="180" bgcolor="#91c338" class="w360"></td>
+                                                            <td width="10"><img src="img/PROJEKTO-cta-green-bt-right.png" width="10"
+                                                                    style="display:block"></td>
+                                                        </tr>
+                                                    </table>
+
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- /Bottom Green Bottom-->
+
+
+                                    </td>
+                                    <td width="15" class="hide"><img src="img/spacer.gif" width="15"></td>
+
                                 </tr>
                             </table>
 
-
-                            <!--Bottom Border-->
-                            <table width="640" class="w380" border="0" cellspacing="0" cellpadding="0" cellmargin="0">
+                            <!--/Header-->
+                            <!--spacer-->
+                            <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="w380" cellmargin="0">
                                 <tr>
-                                    <td width="10"><img src="img/PROJEKTO-welcome-DESK_82.png" alt=""></td>
-                                    <td width="620" bgcolor="#ffffff" class="w360"></td>
-                                    <td width="10"><img src="img/PROJEKTO-welcome-DESK_84.png" alt=""></td>
+                                    <td width="610" class="w380">
+                                        <img src="img/spacer.gif" height="10">
+                                    </td>
                                 </tr>
                             </table>
+                            <!--/spacer-->
+
+                            <!--Separator Line-->
+                            <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="w380" cellmargin="0">
+                                <tr>
+                                <td width="15">
+
+                                </td>
+                                <td width="610" bgcolor="#0d133d" class="w350" style="line-height: 1px;">
+                                    <img src="img/spacer.gif" height="1">
+                                </td>
+                                <td width="15">
+
+                                </td>
+                                </tr>
+                            </table>
+                            <!--/Separator Line-->
+
+                             <!-- spacer -->
+                            <table width="640" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" class="w380" cellmargin="0">
+                                <tr>
+                                <td width="610" class="w380">
+                                    <img src="img/spacer.gif" height="20">
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+
 
                         </td>
                     </tr>
