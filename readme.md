@@ -606,6 +606,21 @@ Es recomendable usar una tabla con una imagen transparente (spacers) para tener 
     </table>
 
 
+## Outlook 2013
+
+Para evitar el desbordamiento de los spacer en Outlook 2013 se recomienda añadir la propiedad de css `line-height` igual a la de el tamaño y la altura de la imagen o el bloque.
+
+     <!-- borde de arriba -->
+    <table width="640" border="0" cellpadding="0" cellspacing="0" class="w380" cellmargin="0">
+        <tr>
+            <td width="10" style="line-height:10;"><img src="img/PROJEKTO-welcome-DESK_12.png" style="display:block"></td>
+            <td width="620" bgcolor="#ffffff" class="w360" style="line-height:10;"></td>
+            <td width="10" style="line-height:10;"><img src="img/PROJEKTO-welcome-DESK_14.png" style="display:block"></td>
+        </tr>
+    </table>
+    <!-- /borde de arriba -->
+
+
 
 
 
