@@ -636,7 +636,33 @@ Ejemplo
 
 # Usar HTML5 Video
 
-Para 
+Al igual que las webfonts el Video solo se puede usar para la aplicación de mail nativa de Android y de Iphone, en Android los controles de reproducción serán iguales a los de Chrome, mientras en Iphone cuando se le da play el video se abre en pantalla completa, lo cual podría afectar al experiencia del usuario. Al insertar el video la ruta debe ser absoluta y se deben colocar fallbacks porque los clientes de correo no renderizan la etiqueta `<video>`
+
+Ejemplo:
+
+     <!-- Video solo for mobile -->
+
+    <!-- start MOBILE-ONLY -->
+    <!--[if !mso]><! -->
+    <div class="showme" style="display:none; overflow:hidden; float:left; width:0px; max-height:0px; max-width:0px; line-height:0px; visibility:hidden;">
+
+        <table width="320" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td align="center" height="167" valign="top" background="/images/1/video-fallback-mob.jpg">
+
+                    <video width="320" height="167" poster="images/fallback.jpg" controls="controls">
+                        <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
+                        <a href="http://mysite.com/"><img src="/images/1/video-fallback-mob.jpg" width="320" height="167" /></a>
+                    </video>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--<![endif]-->
+    <!-- end MOBILE-ONLY -->
+
+    <!-- Video solo for mobile -->
 
 
 
