@@ -620,6 +620,23 @@ Para evitar el desbordamiento de los spacer en Outlook 2013 se recomienda añadi
     </table>
     <!-- /borde de arriba -->
 
+# Usar WebFonts en email
+
+Usar webfonts como en la web es un poco más complicado, los únicos clientes que lo permiten son para android Gmail y Apple Mail, por ello debemos asegurarnos de tener callbacks y hacks en caso de que la fuente no se renderize correctamente, cambiandola por otra opción o tener una tipografía por defecto.
+
+Para añadir una Webfont se inserta el link y luego se llama desde el CSS en línea
+
+Ejemplo
+
+    <!-- HTML Code -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+
+    /* CSS Code */
+    <span style="font-family: 'Bungee Shade', cursive;" > Hello I´m WebFont </span>
+
+
+
+
 
 
 
